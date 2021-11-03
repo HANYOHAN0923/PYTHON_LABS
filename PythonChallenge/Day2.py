@@ -9,28 +9,23 @@ All this functions should check for errors, follow the comments to see all cases
 
 There should be NO ERRORS from Python in the console.
 """
-def add_to_dict(*args):
+def add_to_dict(dic = 0, dicIndex = 0, dicValue = 0):
 
-    type_first_arg = type(args[0])
-    dic = args[0]
-    dictIndex = args[1]
-
-    if type_first_arg != dict:
-        print(f"You need to send a dictionary. You sent: {type_first_arg}")
+    if  type(dic)!= dict:
+        print(f"You need to send a dictionary. You sent: {type(dic)}")
         return 0
 
-    try:
-        dictValue = args[2]
-    except IndexError:
+    if dicIndex == 0 or dicValue ==0:
         print(f"You need to send a word and a definition")
         return 0
 
-
-    if dictIndex in dic:
-        print(f"{args[1]} is already on the dictionary. Won't add.")
+    if dicIndex in dic:
+        print(f"{dicIndex} is already on the dictionary. Won't add.")
+        return 0
     else:
-        dic[dictIndex] = dictValue
-        print(f"{args[1]} has been added.")
+        dic[dicIndex] = dicValue
+        print(f"{dicIndex} has been added.")
+        return 0
 
 def get_from_dict(*args):
     dic = args[0]

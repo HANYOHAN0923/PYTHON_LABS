@@ -11,11 +11,11 @@ class NatureNumber:
         else:
             self.innerNum = "자연수가 아닙니다"
     
-    num = property(getnum, setnum)
+    num_prop = property(getnum, setnum)
 
 currentNum = NatureNumber(4)
-print(currentNum.num)
-currentNum.num = -1
-print(currentNum.num)
-currentNum.num = 0x10
-print(currentNum.num)
+print(currentNum.num_prop)
+currentNum.num_prop = -1
+print(currentNum.num_prop)
+currentNum.num_prop = 0x10
+print(currentNum.num_prop)
