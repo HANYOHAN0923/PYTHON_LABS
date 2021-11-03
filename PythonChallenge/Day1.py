@@ -25,20 +25,16 @@ The fourth item in 'days' is: Thu
 '''
 
 def is_on_list(x, y):
-    if y in x:
-        return True
+    return y in x
 
 def get_x(x, y):
-    item = x[y]
-    return item
+    return x[y]
 
 def add_x(x, y):
     x.append("Sat")
-    return 0
 
 def remove_x(x, y):
-    if y in x:
-        return x.remove(y)
+    x.remove(y)
         
 
 # \/\/\/\/\/\/\  DO NOT TOUCH AREA  \/\/\/\/\/\/\ #
