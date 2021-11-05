@@ -1,5 +1,10 @@
-import requests
+'''
+Documentation:https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+'''
+from indeed import extract_indeed_pages, extract_indeed_jobs
 
-indeed_result = requests.get("https://www.indeed.com/jobs?q=python&limit=50")
+last_indeed_page = extract_indeed_pages()
 
-print(indeed_result)
+extract_indeed_jobs(last_indeed_page)
+
+print(last_indeed_page)
