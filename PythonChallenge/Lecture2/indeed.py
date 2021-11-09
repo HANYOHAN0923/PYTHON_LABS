@@ -24,6 +24,12 @@ def extract_indeed_pages():
 
 #위의 함수를 기초로 하여, 각 페이지마다 접근하여 정보 가져오기
 def extract_indeed_jobs(last_page):
-    for page in range(last_page):
-        page_list = requests.get(f'{URL}&start={page*LIMIT}')
-        print(page_list.status_code)
+    jobs = []
+    #for page in range(last_page):
+    page_list = requests.get(f'{URL}&start={page*LIMIT}')
+    soup = BeautifulSoup(page_list.text, "html.parser")
+    result = soup.find_all("a", {"class": "fs-unmask"})
+    print('')
+
+    
+    return jobs
