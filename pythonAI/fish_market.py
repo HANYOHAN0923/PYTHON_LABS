@@ -30,5 +30,5 @@ length = bream_length + smelt_length
 weight = bream_weight + smelt_weight
 
 # scilit-learn 머신러닝 패키지를 사용하려면 2차원 리스트를 만들어야한다. => [[],[],...]
-fish_data = [[l, w]for l, w in zip(length, weight)]
-# zip 함수 => https://www.daleseo.com/python-zip/
+fish_data = [[l, w] for l, w in zip(length, weight)]  # reference: help/zip.py
+print(fish_data)
