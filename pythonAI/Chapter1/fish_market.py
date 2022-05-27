@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 # k-최근접 이웃 알고르짐 구현을 위해 클래스 임포트
 from sklearn.neighbors import KNeighborsClassifier
 
+# 여기서 인공지능이 구분하기 위해 사용한 길이와 무게 정보를 특성이라고 한다.
 # bream data
 bream_length = [25.4, 26.3, 26.5, 29.0, 29.0, 29.7, 29.7, 30.0, 30.0, 30.7, 31.0, 31.0,
                 31.5, 32.0, 32.0, 32.0, 33.0, 33.0, 33.5, 33.5, 34.0, 34.0, 34.5, 35.0,
